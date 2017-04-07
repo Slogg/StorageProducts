@@ -3,3 +3,11 @@
 ################################################################################
 
 /.vs/StorageProducts/v14
+/StorageProducts/bin/Debug
+/StorageProducts/ConsoleRead
+/StorageProducts/StorageProducts.csproj
+/StorageProducts/App.config
+/StorageProducts/obj/Debug
+/StorageProducts.sln
+/StorageProducts/Properties
+/StorageProducts/Program.cs
