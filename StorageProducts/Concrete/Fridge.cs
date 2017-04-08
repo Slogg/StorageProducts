@@ -51,7 +51,19 @@ namespace StorageProducts.Concrete
                 }
             }
         }
-
+        public void DeleteProduct(int id)
+        {
+            foreach (var sh in GetShelves)
+            {
+                foreach (var prod in sh.GetProducts)
+                {
+                    if (prod.Id == id)
+                    {
+                        sh.DeleteProduct(id);
+                    }
+                }
+            }
+        }
         public List<Shelf> GetFreeShelves(Product product)
         {
             List<Shelf> freeShelves = new List<Shelf>();
