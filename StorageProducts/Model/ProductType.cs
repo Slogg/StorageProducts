@@ -11,5 +11,6 @@ namespace StorageProducts.Model
     {
         public static string Bootle { get { return "бутылка"; } }
         public static string Box { get { return "коробка"; } }
+        public static string Other { get { return "прочее"; } }
     }
 }
