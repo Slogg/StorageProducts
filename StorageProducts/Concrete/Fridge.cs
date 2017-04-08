@@ -55,7 +55,7 @@ namespace StorageProducts.Concrete
         {
             foreach (var sh in GetShelves)
             {
-                foreach (var prod in sh.GetProducts)
+                foreach (var prod in sh.GetProducts.ToArray())
                 {
                     if (prod.Id == id)
                     {
@@ -80,6 +80,20 @@ namespace StorageProducts.Concrete
             }
             return freeShelves;
         }
+        
+        public List<Product> GetAllProducts()
+        {
+            List<Product> products = new List<Product>();
+            foreach (var sh in GetShelves)
+            {
+                foreach(var pr in sh.GetProducts.ToArray())
+                {
+                    products.Add(pr);
+                }
+            }
+            return products;
+        }
+
         public IEnumerable<Shelf> GetShelves
         {
             get { return shelves; }
