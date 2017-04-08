@@ -36,18 +36,38 @@ namespace StorageProducts.Concrete
         // Удаление происходит по номеру полки в List<Shelf>
         public void DeleteProduct(Shelf shelf)
         {
-            var sh = shelves.First(i => i.Id == shelf.Id);
+            Shelf sh = shelves.First(i => i.Id == shelf.Id);
             Volume += sh.Volume;
             shelves.RemoveAll(i => i.Id == shelf.Id);
         }
 
-        public void AddProduct(Product product)
+        public void AddProduct(Shelf shelf, Product product)
         {
-            
-
+            foreach (var sh in GetShelves)
+            {
+                if (sh.Id == shelf.Id)
+                {
+                    sh.AddProduct(product);
+                }
+            }
         }
 
-        
+        public List<Shelf> GetFreeShelves(Product product)
+        {
+            List<Shelf> freeShelves = new List<Shelf>();
+            foreach (var shelves in GetShelves)
+            {
+                if (product.GetTypeProduct() == shelves.GetTypeShelf() && shelves.Volume >= product.Volume)
+                {
+                    freeShelves.Add(shelves);
+                }
+                else if (shelves.GetTypeShelf() == ProductType.Other && shelves.Volume >= product.Volume)
+                {
+                    freeShelves.Add(shelves);
+                }
+            }
+            return freeShelves;
+        }
         public IEnumerable<Shelf> GetShelves
         {
             get { return shelves; }
