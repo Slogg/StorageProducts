@@ -30,11 +30,11 @@ namespace StorageProducts.Abstract
             }
         }
         // Удаление происходит по номеру продукта в List<Product>
-        public void DeleteProduct(Product product)
+        public void DeleteProduct(int id)
         {
-            var pr = products.First(i => i.Id == product.Id);
+            var pr = products.First(i => i.Id == id);
             Volume += pr.Volume;
-            products.RemoveAll(i => i.Id == product.Id);
+            products.RemoveAll(i => i.Id == id);
         }
 
         public IEnumerable<Product> GetProducts

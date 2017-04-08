@@ -34,18 +34,18 @@ namespace StorageProducts.Concrete
             }
         }
         // Удаление происходит по номеру полки в List<Shelf>
-        public void DeleteProduct(Shelf shelf)
+        public void DeleteProduct(int id)
         {
-            Shelf sh = shelves.First(i => i.Id == shelf.Id);
+            Shelf sh = shelves.First(i => i.Id == id);
             Volume += sh.Volume;
-            shelves.RemoveAll(i => i.Id == shelf.Id);
+            shelves.RemoveAll(i => i.Id == id);
         }
 
-        public void AddProduct(Shelf shelf, Product product)
+        public void AddProduct(int id, Product product)
         {
             foreach (var sh in GetShelves)
             {
-                if (sh.Id == shelf.Id)
+                if (sh.Id == id)
                 {
                     sh.AddProduct(product);
                 }
