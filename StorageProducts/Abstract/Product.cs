@@ -8,6 +8,7 @@ namespace StorageProducts.Abstract
 {
     abstract class Product
     {
+        public int Id { get; set; }
         public int Volume { get; set; }
         public string Name { get; set; }
         public DateTime ShelfLife { get; set; }

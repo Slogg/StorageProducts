@@ -8,6 +8,7 @@ namespace StorageProducts.Abstract
 {
     abstract class Shelf
     {
+        public int Id { get; set; }
         public int Volume { get; set; }
         private List<Product> products = new List<Product>();
         public Shelf() { }
@@ -29,10 +30,11 @@ namespace StorageProducts.Abstract
             }
         }
         // Удаление происходит по номеру продукта в List<Product>
-        public void DeleteProduct(int numProductInShelf)
+        public void DeleteProduct(Product product)
         {
-            Volume += products[numProductInShelf].Volume;
-            products.RemoveAt(numProductInShelf);
+            var pr = products.First(i => i.Id == product.Id);
+            Volume += pr.Volume;
+            products.RemoveAll(i => i.Id == product.Id);
         }
 
         public IEnumerable<Product> GetProducts

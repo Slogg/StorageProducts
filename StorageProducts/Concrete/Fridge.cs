@@ -12,7 +12,7 @@ namespace StorageProducts.Concrete
     class Fridge
     {
         public int Volume { get; set; }
-        private List<Shelf> shelfs = new List<Shelf>();
+        private List<Shelf> shelves = new List<Shelf>();
         public Fridge(int volume)
         {
             Volume = volume;
@@ -25,7 +25,7 @@ namespace StorageProducts.Concrete
             if (Volume - shelf.Volume >= 0)
             {
                 Volume -= shelf.Volume;
-                shelfs.Add(shelf);
+                shelves.Add(shelf);
                 return true;
             }
             else
@@ -34,26 +34,23 @@ namespace StorageProducts.Concrete
             }
         }
         // Удаление происходит по номеру полки в List<Shelf>
-        public void DeleteProduct(int numShelfInFridge)
+        public void DeleteProduct(Shelf shelf)
         {
-            Volume += shelfs[numShelfInFridge].Volume;
-            shelfs.RemoveAt(numShelfInFridge);
+            var sh = shelves.First(i => i.Id == shelf.Id);
+            Volume += sh.Volume;
+            shelves.RemoveAll(i => i.Id == shelf.Id);
         }
 
         public void AddProduct(Product product)
         {
-            //foreach (var item in GetShelfs)
-            //{
-            //    if (product.GetTypeProduct() == item.GetTypeShelf())
-            //    {
-            //        item.AddProduct(product);
-            //    }
-            //}
             
+
         }
-        public IEnumerable<Shelf> GetShelfs
+
+        
+        public IEnumerable<Shelf> GetShelves
         {
-            get { return shelfs; }
+            get { return shelves; }
         }
 
 
