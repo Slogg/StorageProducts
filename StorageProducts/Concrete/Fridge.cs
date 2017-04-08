@@ -34,7 +34,7 @@ namespace StorageProducts.Concrete
             }
         }
         // Удаление происходит по номеру полки в List<Shelf>
-        public void DeleteProduct(int id)
+        public void DeleteShelf(int id)
         {
             Shelf sh = shelves.First(i => i.Id == id);
             Volume += sh.Volume;
