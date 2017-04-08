@@ -1,0 +1,12 @@
+D:\Job\Тестирование\1\StorageProducts\StorageProducts\bin\Debug\StorageProducts.exe.config
+D:\Job\Тестирование\1\StorageProducts\StorageProducts\bin\Debug\StorageProducts.exe
+D:\Job\Тестирование\1\StorageProducts\StorageProducts\bin\Debug\StorageProducts.pdb
+D:\Job\Тестирование\1\StorageProducts\StorageProducts\obj\Debug\StorageProducts.csprojResolveAssemblyReference.cache
+D:\Job\Тестирование\1\StorageProducts\StorageProducts\obj\Debug\StorageProducts.exe
+D:\Job\Тестирование\1\StorageProducts\StorageProducts\obj\Debug\StorageProducts.pdb
+D:\Job\Тестирование\1\git\StorageProducts\StorageProducts\bin\Debug\StorageProducts.exe.config
+D:\Job\Тестирование\1\git\StorageProducts\StorageProducts\obj\Debug\StorageProducts.exe
+D:\Job\Тестирование\1\git\StorageProducts\StorageProducts\obj\Debug\StorageProducts.pdb
+D:\Job\Тестирование\1\git\StorageProducts\StorageProducts\bin\Debug\StorageProducts.exe
+D:\Job\Тестирование\1\git\StorageProducts\StorageProducts\bin\Debug\StorageProducts.pdb
+D:\Job\Тестирование\1\git\StorageProducts\StorageProducts\obj\Debug\StorageProducts.csprojResolveAssemblyReference.cache

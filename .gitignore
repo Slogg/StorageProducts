@@ -2,12 +2,6 @@
 # This .gitignore file was automatically created by Microsoft(R) Visual Studio.
 ################################################################################
 
-/.vs/StorageProducts/v14
-/StorageProducts/bin/Debug
+
 /StorageProducts/ConsoleRead
-/StorageProducts/StorageProducts.csproj
-/StorageProducts/App.config
-/StorageProducts/obj/Debug
-/StorageProducts.sln
-/StorageProducts/Properties
-/StorageProducts/Program.cs
+
