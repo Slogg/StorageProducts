@@ -12,10 +12,7 @@ namespace StorageProducts.Abstract
         public int Volume { get; set; }
         private List<Product> products = new List<Product>();
         public Shelf() { }
-        public Shelf(int volume)
-        {
-            Volume = volume;
-        }
+
         public bool AddProduct(Product product)
         {
             if (Volume - product.Volume >= 0)

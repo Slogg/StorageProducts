@@ -11,10 +11,6 @@ namespace StorageProducts.Concrete
     class ShelfOther:Shelf
     {
         public ShelfOther() { }
-        public ShelfOther(int volume):base(volume)
-        {
-            Volume = volume;
-        }
         public override string GetTypeShelf()
         {
             return ProductType.Other;

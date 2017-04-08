@@ -10,12 +10,7 @@ namespace StorageProducts.Concrete
 {
     class ShelfBox : Shelf
     {
-        private List<Product> products = new List<Product>();
         public ShelfBox() { }
-        public ShelfBox(int volume):base(volume)
-        {
-            Volume = volume;
-        }
         public override string GetTypeShelf()
         {
             return ProductType.Box;
